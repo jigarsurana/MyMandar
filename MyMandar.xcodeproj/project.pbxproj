@@ -8,12 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		893A5E7C1B51092D00A23E5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893A5E7B1B51092D00A23E5A /* AppDelegate.swift */; };
-		893A5E7E1B51092D00A23E5A /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893A5E7D1B51092D00A23E5A /* FirstViewController.swift */; };
-		893A5E801B51092D00A23E5A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893A5E7F1B51092D00A23E5A /* SecondViewController.swift */; };
 		893A5E831B51092D00A23E5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 893A5E811B51092D00A23E5A /* Main.storyboard */; };
 		893A5E851B51092D00A23E5A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 893A5E841B51092D00A23E5A /* Images.xcassets */; };
 		893A5E881B51092D00A23E5A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 893A5E861B51092D00A23E5A /* LaunchScreen.xib */; };
 		893A5E941B51092D00A23E5A /* MyMandarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893A5E931B51092D00A23E5A /* MyMandarTests.swift */; };
+		893A5EA41B510F9900A23E5A /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893A5EA31B510F9900A23E5A /* ContactsViewController.swift */; };
+		893A5EAC1B51100300A23E5A /* FeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893A5EAB1B51100300A23E5A /* FeedsViewController.swift */; };
+		893A5EAE1B51101100A23E5A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893A5EAD1B51101100A23E5A /* SettingsViewController.swift */; };
+		893A5EB01B51101B00A23E5A /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893A5EAF1B51101B00A23E5A /* EventsViewController.swift */; };
+		893A5EB31B51492800A23E5A /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893A5EB21B51492800A23E5A /* Address.swift */; };
+		893A5EB51B5149BE00A23E5A /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893A5EB41B5149BE00A23E5A /* Person.swift */; };
+		893A5EB71B5149D100A23E5A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893A5EB61B5149D100A23E5A /* Event.swift */; };
+		893A5EB91B5149E100A23E5A /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893A5EB81B5149E100A23E5A /* Feed.swift */; };
+		89B05BF91B5154A40074CB55 /* BigTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B05BF81B5154A40074CB55 /* BigTableViewCell.swift */; };
+		89B05BFD1B5157420074CB55 /* CustomDummyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B05BFC1B5157420074CB55 /* CustomDummyObject.m */; };
+		89B05BFF1B5157F90074CB55 /* MyConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B05BFE1B5157F90074CB55 /* MyConstants.swift */; };
+		89B05C031B523D9C0074CB55 /* FeedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B05C021B523D9B0074CB55 /* FeedDetailViewController.swift */; };
+		89B05C051B5262E70074CB55 /* SmTestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B05C041B5262E70074CB55 /* SmTestTableViewCell.swift */; };
+		F4CAD3AA59C647F84F2A7C45 /* libPods-MyMandar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2021DF70AAC5C5223E8E4F2 /* libPods-MyMandar.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,17 +39,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3AFB045D1CC245BA1F44553B /* Pods-MyMandar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMandar.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyMandar/Pods-MyMandar.release.xcconfig"; sourceTree = "<group>"; };
+		7252CC46B7694C42272F9EC4 /* Pods-MyMandar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMandar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyMandar/Pods-MyMandar.debug.xcconfig"; sourceTree = "<group>"; };
 		893A5E761B51092D00A23E5A /* MyMandar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMandar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		893A5E7A1B51092D00A23E5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		893A5E7B1B51092D00A23E5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		893A5E7D1B51092D00A23E5A /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		893A5E7F1B51092D00A23E5A /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		893A5E821B51092D00A23E5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		893A5E841B51092D00A23E5A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		893A5E871B51092D00A23E5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		893A5E8D1B51092D00A23E5A /* MyMandarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyMandarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		893A5E921B51092D00A23E5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		893A5E931B51092D00A23E5A /* MyMandarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMandarTests.swift; sourceTree = "<group>"; };
+		893A5EA31B510F9900A23E5A /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		893A5EAB1B51100300A23E5A /* FeedsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsViewController.swift; sourceTree = "<group>"; };
+		893A5EAD1B51101100A23E5A /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		893A5EAF1B51101B00A23E5A /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		893A5EB21B51492800A23E5A /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		893A5EB41B5149BE00A23E5A /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		893A5EB61B5149D100A23E5A /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		893A5EB81B5149E100A23E5A /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		89B05BF81B5154A40074CB55 /* BigTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BigTableViewCell.swift; sourceTree = "<group>"; };
+		89B05BFB1B5157410074CB55 /* MyMandar-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyMandar-Bridging-Header.h"; sourceTree = "<group>"; };
+		89B05BFC1B5157420074CB55 /* CustomDummyObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomDummyObject.m; sourceTree = "<group>"; };
+		89B05BFE1B5157F90074CB55 /* MyConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyConstants.swift; sourceTree = "<group>"; };
+		89B05C021B523D9B0074CB55 /* FeedDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedDetailViewController.swift; sourceTree = "<group>"; };
+		89B05C041B5262E70074CB55 /* SmTestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmTestTableViewCell.swift; sourceTree = "<group>"; };
+		F2021DF70AAC5C5223E8E4F2 /* libPods-MyMandar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyMandar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4CAD3AA59C647F84F2A7C45 /* libPods-MyMandar.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,9 +89,12 @@
 		893A5E6D1B51092D00A23E5A = {
 			isa = PBXGroup;
 			children = (
+				89B05BFC1B5157420074CB55 /* CustomDummyObject.m */,
 				893A5E781B51092D00A23E5A /* MyMandar */,
-				893A5E901B51092D00A23E5A /* MyMandarTests */,
 				893A5E771B51092D00A23E5A /* Products */,
+				E127CD43CF4C7292D72E28E5 /* Pods */,
+				CB5E174F46E835197004D8FC /* Frameworks */,
+				89B05BFB1B5157410074CB55 /* MyMandar-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,12 +110,15 @@
 		893A5E781B51092D00A23E5A /* MyMandar */ = {
 			isa = PBXGroup;
 			children = (
+				893A5EBA1B5149F300A23E5A /* Models */,
+				89B05BFA1B5154B50074CB55 /* TableCells */,
+				893A5EB11B51102900A23E5A /* Controllers */,
 				893A5E7B1B51092D00A23E5A /* AppDelegate.swift */,
-				893A5E7D1B51092D00A23E5A /* FirstViewController.swift */,
-				893A5E7F1B51092D00A23E5A /* SecondViewController.swift */,
+				89B05BFE1B5157F90074CB55 /* MyConstants.swift */,
 				893A5E811B51092D00A23E5A /* Main.storyboard */,
 				893A5E841B51092D00A23E5A /* Images.xcassets */,
 				893A5E861B51092D00A23E5A /* LaunchScreen.xib */,
+				893A5E901B51092D00A23E5A /* MyMandarTests */,
 				893A5E791B51092D00A23E5A /* Supporting Files */,
 			);
 			path = MyMandar;
@@ -105,7 +139,7 @@
 				893A5E911B51092D00A23E5A /* Supporting Files */,
 			);
 			path = MyMandarTests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		893A5E911B51092D00A23E5A /* Supporting Files */ = {
 			isa = PBXGroup;
@@ -115,6 +149,55 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		893A5EB11B51102900A23E5A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				893A5EA31B510F9900A23E5A /* ContactsViewController.swift */,
+				893A5EAF1B51101B00A23E5A /* EventsViewController.swift */,
+				89B05C021B523D9B0074CB55 /* FeedDetailViewController.swift */,
+				893A5EAB1B51100300A23E5A /* FeedsViewController.swift */,
+				893A5EAD1B51101100A23E5A /* SettingsViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		893A5EBA1B5149F300A23E5A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				893A5EB21B51492800A23E5A /* Address.swift */,
+				893A5EB81B5149E100A23E5A /* Feed.swift */,
+				893A5EB41B5149BE00A23E5A /* Person.swift */,
+				893A5EB61B5149D100A23E5A /* Event.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		89B05BFA1B5154B50074CB55 /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				89B05BF81B5154A40074CB55 /* BigTableViewCell.swift */,
+				89B05C041B5262E70074CB55 /* SmTestTableViewCell.swift */,
+			);
+			name = TableCells;
+			sourceTree = "<group>";
+		};
+		CB5E174F46E835197004D8FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F2021DF70AAC5C5223E8E4F2 /* libPods-MyMandar.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E127CD43CF4C7292D72E28E5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7252CC46B7694C42272F9EC4 /* Pods-MyMandar.debug.xcconfig */,
+				3AFB045D1CC245BA1F44553B /* Pods-MyMandar.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,9 +205,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 893A5E971B51092D00A23E5A /* Build configuration list for PBXNativeTarget "MyMandar" */;
 			buildPhases = (
+				98C3D632FAB0C051BDA57962 /* Check Pods Manifest.lock */,
 				893A5E721B51092D00A23E5A /* Sources */,
 				893A5E731B51092D00A23E5A /* Frameworks */,
 				893A5E741B51092D00A23E5A /* Resources */,
+				E7DE06038A104DD8D4D25144 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -164,6 +249,7 @@
 				TargetAttributes = {
 					893A5E751B51092D00A23E5A = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = UPYV76TX32;
 					};
 					893A5E8C1B51092D00A23E5A = {
 						CreatedOnToolsVersion = 6.4;
@@ -210,14 +296,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		98C3D632FAB0C051BDA57962 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E7DE06038A104DD8D4D25144 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyMandar/Pods-MyMandar-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		893A5E721B51092D00A23E5A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				893A5E801B51092D00A23E5A /* SecondViewController.swift in Sources */,
+				89B05BF91B5154A40074CB55 /* BigTableViewCell.swift in Sources */,
+				893A5EB71B5149D100A23E5A /* Event.swift in Sources */,
+				893A5EB91B5149E100A23E5A /* Feed.swift in Sources */,
+				89B05C031B523D9C0074CB55 /* FeedDetailViewController.swift in Sources */,
+				89B05BFF1B5157F90074CB55 /* MyConstants.swift in Sources */,
+				89B05C051B5262E70074CB55 /* SmTestTableViewCell.swift in Sources */,
+				893A5EB31B51492800A23E5A /* Address.swift in Sources */,
+				893A5EAC1B51100300A23E5A /* FeedsViewController.swift in Sources */,
 				893A5E7C1B51092D00A23E5A /* AppDelegate.swift in Sources */,
-				893A5E7E1B51092D00A23E5A /* FirstViewController.swift in Sources */,
+				893A5EA41B510F9900A23E5A /* ContactsViewController.swift in Sources */,
+				893A5EB51B5149BE00A23E5A /* Person.swift in Sources */,
+				89B05BFD1B5157420074CB55 /* CustomDummyObject.m in Sources */,
+				893A5EAE1B51101100A23E5A /* SettingsViewController.swift in Sources */,
+				893A5EB01B51101B00A23E5A /* EventsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,21 +472,34 @@
 		};
 		893A5E981B51092D00A23E5A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7252CC46B7694C42272F9EC4 /* Pods-MyMandar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MyMandar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyMandar-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		893A5E991B51092D00A23E5A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AFB045D1CC245BA1F44553B /* Pods-MyMandar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MyMandar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyMandar-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -413,6 +556,7 @@
 				893A5E991B51092D00A23E5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		893A5E9A1B51092D00A23E5A /* Build configuration list for PBXNativeTarget "MyMandarTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +565,7 @@
 				893A5E9C1B51092D00A23E5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
