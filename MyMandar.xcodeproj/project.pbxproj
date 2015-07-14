@@ -20,6 +20,7 @@
 		893A5EB51B5149BE00A23E5A /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893A5EB41B5149BE00A23E5A /* Person.swift */; };
 		893A5EB71B5149D100A23E5A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893A5EB61B5149D100A23E5A /* Event.swift */; };
 		893A5EB91B5149E100A23E5A /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893A5EB81B5149E100A23E5A /* Feed.swift */; };
+		89AC45781B5502A30013D216 /* AddFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC45771B5502A30013D216 /* AddFeedViewController.swift */; };
 		89B05BF91B5154A40074CB55 /* BigTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B05BF81B5154A40074CB55 /* BigTableViewCell.swift */; };
 		89B05BFD1B5157420074CB55 /* CustomDummyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B05BFC1B5157420074CB55 /* CustomDummyObject.m */; };
 		89B05BFF1B5157F90074CB55 /* MyConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B05BFE1B5157F90074CB55 /* MyConstants.swift */; };
@@ -58,6 +59,7 @@
 		893A5EB41B5149BE00A23E5A /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		893A5EB61B5149D100A23E5A /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		893A5EB81B5149E100A23E5A /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		89AC45771B5502A30013D216 /* AddFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFeedViewController.swift; sourceTree = "<group>"; };
 		89B05BF81B5154A40074CB55 /* BigTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BigTableViewCell.swift; sourceTree = "<group>"; };
 		89B05BFB1B5157410074CB55 /* MyMandar-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyMandar-Bridging-Header.h"; sourceTree = "<group>"; };
 		89B05BFC1B5157420074CB55 /* CustomDummyObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomDummyObject.m; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 		893A5EB11B51102900A23E5A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				89AC45771B5502A30013D216 /* AddFeedViewController.swift */,
 				893A5EA31B510F9900A23E5A /* ContactsViewController.swift */,
 				893A5EAF1B51101B00A23E5A /* EventsViewController.swift */,
 				89B05C021B523D9B0074CB55 /* FeedDetailViewController.swift */,
@@ -346,6 +349,7 @@
 				893A5EA41B510F9900A23E5A /* ContactsViewController.swift in Sources */,
 				893A5EB51B5149BE00A23E5A /* Person.swift in Sources */,
 				89B05BFD1B5157420074CB55 /* CustomDummyObject.m in Sources */,
+				89AC45781B5502A30013D216 /* AddFeedViewController.swift in Sources */,
 				893A5EAE1B51101100A23E5A /* SettingsViewController.swift in Sources */,
 				893A5EB01B51101B00A23E5A /* EventsViewController.swift in Sources */,
 			);

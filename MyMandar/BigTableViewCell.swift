@@ -12,7 +12,6 @@ class BigTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var feedImageView: UIImageView!
-    @IBOutlet weak var uploadedByLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

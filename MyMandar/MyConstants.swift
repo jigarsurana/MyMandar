@@ -8,6 +8,6 @@
 
 import Foundation
 struct GlobalConstants {
-    static let BASE_API_URL:String = "http://192.168.0.100:8000/"
+    static let BASE_API_URL:String = "http://127.0.0.1:8000/"
 }
 
