@@ -8,12 +8,17 @@
 
 import UIKit
 
-class AddFeedViewController: UIViewController {
-
+class AddFeedViewController: UIViewController, UITextFieldDelegate {
+    
+    @IBOutlet weak var titleLabel: UITextField!
+    @IBOutlet weak var uploaderLabel: UITextField!
     @IBOutlet weak var textView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.titleLabel.delegate = self;
+        self.uploaderLabel.delegate = self;
+        
         textView.layer.borderColor = UIColor.grayColor().colorWithAlphaComponent(0.5).CGColor
         textView.layer.borderWidth = 0.5
         textView.layer.cornerRadius = 5
@@ -32,7 +37,44 @@ class AddFeedViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func saveAndUpload(sender: AnyObject) {
+        self.saveWithTitle(self.titleLabel.text, uploader: self.uploaderLabel.text, desc: self.textView.text)
+    }
 
+    func saveWithTitle(title: String, uploader: String, desc: String) {
+        let appDelegate =
+        UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        let managedContext = appDelegate.managedObjectContext!
+        
+        //2
+        let entity =  NSEntityDescription.entityForName("FeedModel",
+            inManagedObjectContext:
+            managedContext)
+        
+        let feed = FeedModel(entity: entity!,
+            insertIntoManagedObjectContext:managedContext)
+        
+        //3
+    
+        feed.uploader = uploader
+        feed.title = title
+        feed.feed_description = desc
+        
+        //4
+        var error: NSError?
+        if !managedContext.save(&error) {
+            println("Could not save \(error), \(error?.userInfo)")
+        } else {
+            println("feed saved")
+        }
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool // called when 'return' key pressed. return NO to ignore.
+    {
+        textField.resignFirstResponder()
+        return true;
+    }
     /*
     // MARK: - Navigation
 

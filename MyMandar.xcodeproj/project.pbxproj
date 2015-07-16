@@ -20,6 +20,8 @@
 		893A5EB51B5149BE00A23E5A /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893A5EB41B5149BE00A23E5A /* Person.swift */; };
 		893A5EB71B5149D100A23E5A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893A5EB61B5149D100A23E5A /* Event.swift */; };
 		893A5EB91B5149E100A23E5A /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893A5EB81B5149E100A23E5A /* Feed.swift */; };
+		896318DD1B577C11006D2384 /* MyMandarModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 896318DB1B577C11006D2384 /* MyMandarModel.xcdatamodeld */; };
+		896318DF1B578CB8006D2384 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896318DE1B578CB8006D2384 /* FeedModel.swift */; };
 		89AC45781B5502A30013D216 /* AddFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC45771B5502A30013D216 /* AddFeedViewController.swift */; };
 		89B05BF91B5154A40074CB55 /* BigTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B05BF81B5154A40074CB55 /* BigTableViewCell.swift */; };
 		89B05BFD1B5157420074CB55 /* CustomDummyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B05BFC1B5157420074CB55 /* CustomDummyObject.m */; };
@@ -59,6 +61,9 @@
 		893A5EB41B5149BE00A23E5A /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		893A5EB61B5149D100A23E5A /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		893A5EB81B5149E100A23E5A /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		896318D61B577927006D2384 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		896318DC1B577C11006D2384 /* MyMandarModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyMandarModel.xcdatamodel; sourceTree = "<group>"; };
+		896318DE1B578CB8006D2384 /* FeedModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
 		89AC45771B5502A30013D216 /* AddFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFeedViewController.swift; sourceTree = "<group>"; };
 		89B05BF81B5154A40074CB55 /* BigTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BigTableViewCell.swift; sourceTree = "<group>"; };
 		89B05BFB1B5157410074CB55 /* MyMandar-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyMandar-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -120,8 +125,10 @@
 				893A5E811B51092D00A23E5A /* Main.storyboard */,
 				893A5E841B51092D00A23E5A /* Images.xcassets */,
 				893A5E861B51092D00A23E5A /* LaunchScreen.xib */,
+				896318DE1B578CB8006D2384 /* FeedModel.swift */,
 				893A5E901B51092D00A23E5A /* MyMandarTests */,
 				893A5E791B51092D00A23E5A /* Supporting Files */,
+				896318DB1B577C11006D2384 /* MyMandarModel.xcdatamodeld */,
 			);
 			path = MyMandar;
 			sourceTree = "<group>";
@@ -187,6 +194,7 @@
 		CB5E174F46E835197004D8FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				896318D61B577927006D2384 /* CoreData.framework */,
 				F2021DF70AAC5C5223E8E4F2 /* libPods-MyMandar.a */,
 			);
 			name = Frameworks;
@@ -339,6 +347,7 @@
 			files = (
 				89B05BF91B5154A40074CB55 /* BigTableViewCell.swift in Sources */,
 				893A5EB71B5149D100A23E5A /* Event.swift in Sources */,
+				896318DF1B578CB8006D2384 /* FeedModel.swift in Sources */,
 				893A5EB91B5149E100A23E5A /* Feed.swift in Sources */,
 				89B05C031B523D9C0074CB55 /* FeedDetailViewController.swift in Sources */,
 				89B05BFF1B5157F90074CB55 /* MyConstants.swift in Sources */,
@@ -349,6 +358,7 @@
 				893A5EA41B510F9900A23E5A /* ContactsViewController.swift in Sources */,
 				893A5EB51B5149BE00A23E5A /* Person.swift in Sources */,
 				89B05BFD1B5157420074CB55 /* CustomDummyObject.m in Sources */,
+				896318DD1B577C11006D2384 /* MyMandarModel.xcdatamodeld in Sources */,
 				89AC45781B5502A30013D216 /* AddFeedViewController.swift in Sources */,
 				893A5EAE1B51101100A23E5A /* SettingsViewController.swift in Sources */,
 				893A5EB01B51101B00A23E5A /* EventsViewController.swift in Sources */,
@@ -572,6 +582,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		896318DB1B577C11006D2384 /* MyMandarModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				896318DC1B577C11006D2384 /* MyMandarModel.xcdatamodel */,
+			);
+			currentVersion = 896318DC1B577C11006D2384 /* MyMandarModel.xcdatamodel */;
+			path = MyMandarModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 893A5E6E1B51092D00A23E5A /* Project object */;
 }

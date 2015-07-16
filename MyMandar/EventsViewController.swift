@@ -8,15 +8,27 @@
 
 import UIKit
 
-class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+
     @IBOutlet weak var tableView: UITableView!
 
+    @IBOutlet weak var srchBar: UISearchBar!
+    var seActive :Bool! = false
+    
     var textArray:[String] = ["hello","jinuuuu","mitishaaaa","aaaaasdadsa","aaasasd"]
+        var textArray1 = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        srchBar.showsScopeBar = true
+        srchBar.delegate = self
+        srchBar.placeholder = "search"
 
-        
         // Do any additional setup after loading the view.
+//        self.tableView.estimatedRowHeight = 100;
+        
+//        self.tableView.estimatedRowHeight = 100;
+//        self.tableView.rowHeight = UITableViewAutomaticDimension;
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,7 +36,46 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // Dispose of any resources that can be recreated.
     }
     
+    func searchBarSearchButtonClicked( searchBar: UISearchBar)
+    {
+        self.seActive = true
+        srchBar.showsCancelButton = true
+        self.tableView.reloadData()
+    }
 
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        self.seActive = false
+        srchBar.resignFirstResponder()
+        srchBar.showsCancelButton = false
+        srchBar.text = ""
+        self.tableView.reloadData()
+    }
+    
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        self.seActive = true
+        srchBar.showsCancelButton = true
+        self.tableView.reloadData()
+    }
+    
+    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
+        self.seActive = false;
+        self.tableView.reloadData()
+    }
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        textArray1 = textArray.filter({ (text) -> Bool in
+            let tmp: NSString = text
+            let range = tmp.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
+            return range.location != NSNotFound
+        })
+        if(textArray1.count == 0){
+            seActive = true;
+        } else {
+            seActive = true;
+        }
+        self.tableView.reloadData()
+    }
     /*
     // MARK: - Navigation
 
@@ -36,14 +87,21 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     */
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-      return self.textArray.count
+        if(seActive == true) {
+            return self.textArray1.count
+        }else {
+            return self.textArray.count
+        }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell:SmTestTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cellE") as! SmTestTableViewCell
-        cell.testTitleLabel.text = textArray[indexPath.row]
-//        cell.uploadedByLabel.text = "- " + feed.uploaded_by
-        setFeedCellConstraints(cell)
+        
+        if(self.seActive == true) {
+          cell.testTitleLabel.text = textArray1[indexPath.row]
+        } else {
+         cell.testTitleLabel.text = textArray[indexPath.row]
+        }
         return cell
     }
     
@@ -51,30 +109,4 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
     }
     
-    func setFeedCellConstraints(cell: SmTestTableViewCell) {
-        //Title
-//        self.tableView.setTranslatesAutoresizingMaskIntoConstraints(false)
-//        cell.setTranslatesAutoresizingMaskIntoConstraints(false)
-        var c1 = NSLayoutConstraint(item: cell.testTitleLabel, attribute: NSLayoutAttribute.Leading, relatedBy: NSLayoutRelation.Equal, toItem: cell, attribute: NSLayoutAttribute.LeadingMargin, multiplier: 1, constant: 5)
-        
-//        var c2 = NSLayoutConstraint(item: cell.testTitleLabel, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: cell, attribute: NSLayoutAttribute.TopMargin, multiplier: 1, constant: 5)
-//        var c3 = NSLayoutConstraint(item: cell.testTitleLabel, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.LessThanOrEqual, toItem: nil, attribute: NSLayoutAttribute.Width, multiplier: 1, constant: 300)
-
-        //        var c4 = NSLayoutConstraint(item: cell.titleLabel, attribute: NSLayoutAttribute.Right, relatedBy: NSLayoutRelation.Equal, toItem: cell.uploadedByLabel, attribute: NSLayoutAttribute.Right, multiplier: 1, constant: 0)
-        
-//        //uploaded by
-//        var c5 = NSLayoutConstraint(item: cell.uploadedByLabel, attribute: NSLayoutAttribute.Leading, relatedBy: NSLayoutRelation.GreaterThanOrEqual, toItem: cell, attribute: NSLayoutAttribute.LeadingMargin, multiplier: 1, constant: 5)
-//        var c6 = NSLayoutConstraint(item: cell.uploadedByLabel, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.GreaterThanOrEqual, toItem: cell, attribute: NSLayoutAttribute.BottomMargin, multiplier: 1, constant: 10)
-//        //        var c7 = NSLayoutConstraint(item: cell.uploadedByLabel, attribute: NSLayoutAttribute.Right, relatedBy: NSLayoutRelation.Equal, toItem: cell.titleLabel, attribute: NSLayoutAttribute.Right, multiplier: 1, constant: 0)
-//        
-//        //image view
-//        var c8 = NSLayoutConstraint(item: cell.imageView!, attribute: NSLayoutAttribute.Trailing, relatedBy: NSLayoutRelation.Equal, toItem: cell, attribute: NSLayoutAttribute.TrailingMargin, multiplier: 1, constant: 6)
-//        var c9 = NSLayoutConstraint(item: cell.imageView!, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: cell, attribute: NSLayoutAttribute.TopMargin, multiplier: 1, constant: 7)
-//        var c10 = NSLayoutConstraint(item: cell.imageView!, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.Width, multiplier: 1, constant: 50)
-//        var c11 = NSLayoutConstraint(item: cell.imageView!, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.Height, multiplier: 1, constant: 50)
-//        cell.addConstraints([c1,c2,c3,c4,c5,c6,c8,c9,c10,c11])
-        cell.addConstraints([c1])
-        
-
-    }
 }

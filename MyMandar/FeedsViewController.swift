@@ -28,6 +28,7 @@ class FeedsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to get latest updates")
         self.refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
         self.tableView.addSubview(refreshControl)
+//        self.tableView.rowHeight = 100;
     
     }
 
@@ -96,6 +97,7 @@ class FeedsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             feed = self.feeds[indexPath.row]
         }
         println(feed.feed_image)
+        
         var url:NSURL = NSURL(string: feed.feed_image)!
         var data:NSData = NSData(contentsOfURL: url, options: nil, error: nil)!
         cell.feedImageView.image = UIImage(data: data)
@@ -153,25 +155,49 @@ class FeedsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.tableView.reloadData()
     }
     
-    func setFeedCellConstraints(cell: BigTableViewCell) {
-        //Title
-        var c1 = NSLayoutConstraint(item: cell.titleLabel, attribute: NSLayoutAttribute.Leading, relatedBy: NSLayoutRelation.Equal, toItem: cell, attribute: NSLayoutAttribute.LeadingMargin, multiplier: 1, constant: 5)
-        var c2 = NSLayoutConstraint(item: cell.titleLabel, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: cell, attribute: NSLayoutAttribute.TopMargin, multiplier: 1, constant: 5)
-        var c3 = NSLayoutConstraint(item: cell.titleLabel, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.LessThanOrEqual, toItem: nil, attribute: NSLayoutAttribute.Width, multiplier: 1, constant: 300)
-//        var c4 = NSLayoutConstraint(item: cell.titleLabel, attribute: NSLayoutAttribute.Right, relatedBy: NSLayoutRelation.Equal, toItem: cell.uploadedByLabel, attribute: NSLayoutAttribute.Right, multiplier: 1, constant: 0)
-
-        //uploaded by
-//        var c5 = NSLayoutConstraint(item: cell.uploadedByLabel, attribute: NSLayoutAttribute.Leading, relatedBy: NSLayoutRelation.GreaterThanOrEqual, toItem: cell, attribute: NSLayoutAttribute.LeadingMargin, multiplier: 1, constant: 5)
-//        var c6 = NSLayoutConstraint(item: cell.uploadedByLabel, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.GreaterThanOrEqual, toItem: cell, attribute: NSLayoutAttribute.BottomMargin, multiplier: 1, constant: 10)
-//        var c7 = NSLayoutConstraint(item: cell.uploadedByLabel, attribute: NSLayoutAttribute.Right, relatedBy: NSLayoutRelation.Equal, toItem: cell.titleLabel, attribute: NSLayoutAttribute.Right, multiplier: 1, constant: 0)
-
-        //image view
-        var c8 = NSLayoutConstraint(item: cell.imageView!, attribute: NSLayoutAttribute.Trailing, relatedBy: NSLayoutRelation.Equal, toItem: cell, attribute: NSLayoutAttribute.TrailingMargin, multiplier: 1, constant: 6)
-        var c9 = NSLayoutConstraint(item: cell.imageView!, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: cell, attribute: NSLayoutAttribute.TopMargin, multiplier: 1, constant: 7)
-        var c10 = NSLayoutConstraint(item: cell.imageView!, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.Width, multiplier: 1, constant: 50)
-        var c11 = NSLayoutConstraint(item: cell.imageView!, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.Height, multiplier: 1, constant: 50)
-        cell.addConstraints([c1,c2,c3,c8,c9,c10,c11])
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         
+        //1
+        let appDelegate =
+        UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        let managedContext = appDelegate.managedObjectContext!
+        
+        //2
+        let fetchRequest = NSFetchRequest(entityName:"FeedModel")
+        
+        //3
+        var error: NSError?
+        
+        let fetchedResults =
+        managedContext.executeFetchRequest(fetchRequest,
+            error: &error) as? [NSManagedObject]
+        
+        if let results = fetchedResults {
+//             print(results)
+            
+            
+            for result in results {
+                var title: String = result.valueForKey("title") as! String
+                var desc: String = result.valueForKey("feed_description") as! String
+                var uploader: String = result.valueForKey("uploader") as! String
+                
+                var feedd :Feed = Feed()
+                feedd.uploaded_by = uploader
+                feedd.feed_title = title
+                feedd.feed_text = desc
+                feedd.feed_image = "http://localhost:8000/static/media/feeds/levis-poster.jpg"
+                
+                feeds.append(feedd)
+                self.tableView.reloadData()
+//                    print(result.valueForKey("title"))
+//                    print(result.valueForKey("feed_description"))
+//                    print(result.valueForKey("uploader"))
+            }
+        } else {
+            println("Could not fetch \(error), \(error!.userInfo)")
+        }
     }
 
 }
